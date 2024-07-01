@@ -8,7 +8,7 @@ It has a POST api that accepts "file" as form-data type.
 It validates below points:
 
 - only a single "file" allowed to upload
-- max file size is a 2MB
+- max file size is a 2KB
 - only text file allowed
 
 API end-points:
