@@ -46,6 +46,15 @@ Make sure you don't have other service running on that port before running this 
 
 Run npm run test at root directory, it will run Unit and Integration tests for the project.
 
+### Integration test coverage
+
+## http://localhost:3000/api/v1/files/stats
+
+1. Calling API with out file
+2. Calling API with valid text file
+3. Calling API with JSON and JPEG file
+4. Calling API with multiple files
+
 ## Next steps for development team
 
 - Onboard to Swagger
