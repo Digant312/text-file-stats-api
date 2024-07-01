@@ -1,5 +1,5 @@
 const textStatistics = function (text) {
-  if (text.length === 0)
+  if (!text || text.length === 0)
     return {
       wordCount: 0,
       letterCount: 0,
@@ -12,13 +12,11 @@ const textStatistics = function (text) {
   const topThreeLetters = topCommonLetters(text, 3);
   const words = text.split(/\s+/).filter(Boolean);
   const wordCount = words.length;
-
   const letters = text.replace(/\s+/g, "");
-  const letterCount = letters ? letters.length : 0;
 
+  const letterCount = letters ? letters.length : 0;
   const symbols = text.match(/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/g);
   const symbolCount = symbols ? symbols.length : 0;
-
   return {
     wordCount,
     letterCount,
@@ -60,4 +58,6 @@ const topCommonLetters = function (text, numberOfLetters = 3) {
 
 module.exports = {
   textStatistics,
+  topCommonWords,
+  topCommonLetters,
 };

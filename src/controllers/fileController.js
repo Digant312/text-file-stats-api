@@ -67,4 +67,5 @@ const statistics = async (req, res) => {
 
 module.exports = {
   statistics,
+  fileUpload,
 };

@@ -9,7 +9,7 @@ It validates below points:
 
 - only a single "file" allowed to upload
 - max file size is a 2MB
-- onlt text file allowed
+- only text file allowed
 
 API end-points:
 
@@ -19,12 +19,13 @@ API end-points:
 
 - It follow trunk based deployment strategy, "main" is a default branch.
 - All developers should create a brach from "main" and need to keep in sync with it.
-- This project follows routes -> controller -> service -> model structure.
+- This project follows routes -> controller -> service -> model design pattern.
 - Responsibility at each layer:
   - Router: defines end-point routes for different entity - file, user, team etc.
   - Controller: does required validation - authentication check, input validation, etc. , calls business service, handle errors and returns response.
   - Service: Contains business logic.
   - Model: Handles data transactions - storing/fetching data from database.
+- Have API versioning implemented. Currently only v1 version routes available.
 - It does not have authentication and swagger documentation in place as of now.
 - API end-point has allowed CORS for all domains for testing.
 
@@ -44,3 +45,9 @@ Make sure you don't have other service running on that port before running this 
 ### npm run test
 
 Run npm run test at root directory, it will run Unit and Integration tests for the project.
+
+## Next steps for development team
+
+- Onboard to Swagger
+- Add proper logger
+- Cover proper unit and integration test cases.
